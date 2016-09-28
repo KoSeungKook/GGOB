@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/closeBtn"
+            android:layout_alignParentTop="true"
+            android:text="Server Connect"
+            android:id="@+id/checkBox_server"
+            android:clickable="false"/>
+
+        <Button
+            android:id="@+id/connBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/closeBtn"
+            android:onClick="connBtnClick"
+            android:text="접속"/>
+
+        <Button
+            android:id="@+id/closeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="2dp"
+            android:onClick="connBtnClick"
+            android:text="종료"/>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180sp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/viewText"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#53978f"
+            android:scrollbars="vertical"
+            android:singleLine="false"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/tab1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tab2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tab3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom">
+
+        <EditText
+            android:id="@+id/sendText"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:maxLength="12"
+            android:singleLine="true"
+            android:text=""/>
+
+        <Button
+            android:id="@+id/sendBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="connBtnClick"
+            android:text="보내기"
+            android:layout_weight="0.06" />
+
+        <Button
+            android:id="@+id/valueBtn"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:onClick="connBtnClick"
+            android:text="VALUE"/>
+
+        <Button
+        android:id="@+id/specBtn"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:onClick="connBtnClick"
+        android:text="SPEC"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="SPEC :"/>
+
+        <EditText
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/specText"
+            android:gravity="center"
+            android:maxLength="4"
+            android:singleLine="true"
+            android:text="0"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="MAX_DIF :"/>
+
+        <EditText
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/maxText"
+            android:gravity="center"
+            android:maxLength="4"
+            android:singleLine="true"
+            android:text="0"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="MIN_DIF :"/>
+
+        <EditText
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/minText"
+            android:gravity="center"
+            android:maxLength="4"
+            android:singleLine="true"
+            android:text="0"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/textview_led"
+        android:gravity="center"
+        android:text="LED\n(???)"
+        android:textSize="30dp"
+        android:textStyle="bold"/>
+
+</LinearLayout>
